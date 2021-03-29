@@ -1,0 +1,24 @@
+.top-header {
+    padding: 16px 32px;
+    background: #86BCDA;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.top-header h5 {
+    color: #081B5C;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.content {
+    padding: 32px;
+    background: #A9C5AF;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.content p {
+    padding: 16px;
+    font-size: 28px;
+    color: rgba(12, 38, 17, 0.8);
+}

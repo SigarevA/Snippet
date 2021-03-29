@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="top-header">
+        <img *ngIf="this.user != null && this.user.imagePath == null" src="assets/media/image/account-user.png" alt="account">
+        <img *ngIf="this.user != null && this.user.imagePath != null" [src]="this.user.imagePath"/>
+        <p>
+            <span *ngIf="user != null" class="name-user">{{user.name}}</span><br/>
+            <span *ngIf="user != null" class="email-user">{{user.email}}</span>
+        </p>
+    </div>
+    <div class="manage-profile">
+        <div class="d-sm-flex justify-content-center">
+            <div class="manage-elem">
+                <button (click)="clickFollowers()">
+                    <img src="assets/media/image/community.png" alt="community">
+                    <p>Подписчики</p>
+                </button>
+            </div>
+            <div class="manage-elem">
+                <button (click)="clickAuhtors()">
+                <img src="assets/media/image/Ink_Pen.png" alt="pen">
+                <p>Подписки</p>
+                </button>
+            </div>
+            <div *ngIf=" this.anyProfile && this.subscription" (click)="clickSubscribe()" class="manage-elem">
+                <button>
+                <img src="assets/media/image/circle_plus.png" alt="pen">
+                <p>Подписаться</p>
+                </button>
+            </div>
+            <div *ngIf="this.anyProfile && !this.subscription" (click)="clickUnSubscribe()" class="manage-elem">
+                <button>
+                <img src="assets/media/image/clear_black.png" alt="pen">
+                <p>Отписаться</p>
+                </button>
+            </div>
+        </div>  
+    </div>
+    <div *ngIf="this.listSnippets" class="list-snippet">
+        <h5>Опубликованные сниппеты</h5>
+        <div>
+            <p *ngIf="listSnippets.length == 0">
+                Пусто
+            </p>
+        </div>
+        <app-card-snippet *ngFor="let snippet of listSnippets" [snippet]="snippet"></app-card-snippet>
+    </div>
+</div>

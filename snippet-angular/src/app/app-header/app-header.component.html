@@ -1,0 +1,46 @@
+<div (resized)='this.onResized($event)' class="header-container">
+    
+    <a class="logo" [routerLink]="[this.logoLinkPage]">Сниппет</a>
+    
+    <div class="text-right">
+        <a  [ngClass]=" {
+                'hidden-menu-btn' : !this.latentMenu
+            }"  
+            class="btn btn-primary menu-btn" 
+            data-toggle="collapse" 
+            href="#collapseExample" 
+            aria-expanded="false" 
+            aria-controls="collapseExample"
+            >
+            <img src="assets/media/image/menu.png">
+        </a>
+    </div>
+
+    <div [ngClass]="{'collapse': this.latentMenu}"  id="collapseExample">
+
+        <nav *ngIf='!checkAuth()' [ngClass]="{'text-right': !this.latentMenu}">
+            <a [routerLink]="['/signup']" class="menu-link">Регистрация</a>
+            <a [routerLink]="['/login']" class="menu-link">Войти</a>
+        </nav>  
+
+        <nav *ngIf="checkAuth()">
+            <a [routerLink]="['settings']">
+                <svg class="gear">
+                    <use xlink:href="assets/media/image/gear.svg#gear"></use>
+                </svg>
+            </a>
+            <a [routerLink]="['ribbon']" class="menu-link">
+                Лента
+            </a>
+            <a [routerLink]="['create/snippet']" class="menu-link">
+                Создать
+            </a>
+            <a [routerLink]="['profile']" class="menu-link">
+                Профиль
+            </a>
+            <button (click)="clickExitUser($event)" class="menu-link">
+                Выйти
+            </button>
+        </nav>
+    </div>
+</div>

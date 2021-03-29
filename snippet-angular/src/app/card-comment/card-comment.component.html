@@ -1,0 +1,31 @@
+<div class="card-comment">
+    <div class="row">
+        <div class="col-lg-2 col-md-3 manage">
+            <div class="account-user">
+                <img src="assets/media/image/account-user.png"/>
+            </div>
+            <div>
+                <button 
+                [ngClass]=" 
+                {
+                    'active': this.comment.favorite,
+                    'disable' : !this.comment.favorite
+                }"
+                (click)="clickLikeBtn()"
+            >
+                <img src="assets/media/image/favorite.png">
+            </button>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-9 body">
+            <p>
+                {{this.comment.authorDTO.name}}
+            </p>
+            <div class="content">
+                <p>
+                    {{this.comment.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

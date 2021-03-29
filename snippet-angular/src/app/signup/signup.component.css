@@ -1,0 +1,25 @@
+.shape-outline {
+    margin : 16px;
+    padding : 8px;
+    border : 1px solid #060B33; 
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.2);
+}
+
+.form-header {
+    text-align: center;
+    margin: 16px 0 32px 0;
+}
+
+
+div.shape-outline:hover {
+    box-shadow: 5px 15px 15px 0 rgba(0,0,0,0.2);
+}
+
+.form-registration {
+    margin-bottom: 32px;
+}
+
+.invalid-msg {
+    color: lightcoral;
+}

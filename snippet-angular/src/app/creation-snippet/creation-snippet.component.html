@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="content">
+        <form> 
+            <div [ngClass]="{'visibility-alert': !this.nullContentError }" class="col-lg-8 alr">
+                <div class="alert alert-danger" role="alert">
+                    <strong>Ошибка!</strong> Сниппет должен содержать хотя бы один символ.
+                </div>
+            </div>
+            <div [ngClass]="{'visibility-alert': !this.creationFailure }" class="col-lg-8 alr">
+                <div class="alert alert-danger" role="alert">
+                    <strong>Ошибка!</strong> Произошел сбой в работе ресурса.
+                </div>
+            </div>
+            <div [ngClass]="{'visibility-alert': !this.creationSuccess }" class="col-lg-8 alr">
+                <div class="alert alert-success" role="alert">
+                    <strong>Готово!</strong> Сниппет добавлен.
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <textarea (keyup)="this.fillContent($event)" [(ngModel)]="this.content" name="cotent"></textarea>
+                <p [ngClass]="{'limit': this.length == maxLength}">
+                    <span>
+                        {{this.length}} / {{this.maxLength}}
+                    </span>
+                </p>
+            </div>
+            <div class="col-lg-8">
+                <button (click)="this.clickPost()">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.vsu.cs.Crocodile.entities</OriginalElement>
+  <nodes>
+    <node x="405.0" y="0.0">ru.vsu.cs.Crocodile.entities.Snippet</node>
+    <node x="0.0" y="0.0">ru.vsu.cs.Crocodile.entities.User</node>
+    <node x="0.0" y="933.0">ru.vsu.cs.Crocodile.entities.TapeType</node>
+    <node x="1090.0" y="0.0">ru.vsu.cs.Crocodile.entities.BlobEntity</node>
+    <node x="795.0" y="0.0">ru.vsu.cs.Crocodile.entities.Comment</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.7860287891617274" x="576.0341484433911" y="345.12657546051935" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

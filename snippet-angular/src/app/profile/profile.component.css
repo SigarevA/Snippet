@@ -1,0 +1,90 @@
+.top-header img {
+    height : 128px;
+    border-radius: 100%;
+}
+
+.top-header p {
+    float: right;
+    vertical-align: middle;
+    border: 1px, solid, black;
+    margin-top: 25px;
+}
+
+.name-user {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.email-user {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #E8DFDF;
+}
+
+.top-header {
+    padding: 16px 32px;
+    background: #86BCDA;
+}
+
+.manage-profile {
+    background: #FFFFFF;
+    border: 1px solid #232046;
+    box-sizing: border-box;   
+    padding: 8px 32px;
+    text-align: center;
+}
+
+.manage-elem {
+    margin: 0 8px;
+}
+
+.manage-profile img {
+    height: 32px;
+}
+
+.manage-profile button {
+    padding: 8px;
+    border: none; 
+    outline: none;
+    background: inherit;
+}
+
+.manage-profile button:hover {
+    box-shadow: 0 0 5px;
+}
+
+.manage-profile p {
+    margin: 0;
+}
+
+@media(max-width: 400px) {
+    .top-header p {
+        float: none;
+    }   
+}
+
+.list-snippet {
+    background: #A9C5AF;
+    padding: 8px 16px;
+    height: 100%;
+}
+
+.list-snippet h5 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: #0E5054;
+}
+
+.list-snippet p {
+    padding: 16px 32px;
+    font-size: 28px;
+    color: rgba(12, 38, 17, 0.8);
+}

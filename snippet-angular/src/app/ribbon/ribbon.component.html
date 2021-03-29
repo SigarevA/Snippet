@@ -1,0 +1,33 @@
+<div class="container">
+    <div *ngIf="this.errorShow" class="alert alert-info" role="alert">
+        <strong>Приносим свои искренние извинения за неудобства!</strong>
+        В данный момент мы не сможем обработать ваше подключение, попробуйте позже.
+    </div>
+    <div *ngIf="!this.errorShow" class="paper">
+        <div *ngIf="tapeTypes" class="menu-items">
+            <ul>
+                <li *ngFor="let tapeType of tapeTypes.tapeTypes">
+                    <button  
+                        [ngClass]="{
+                            'active_type_tape': tapeType.selected,
+                            'disactive_type_tape' : !tapeType.selected
+                        }"
+                        (click)="pickTapeType(tapeType.name)"
+                    > 
+                        {{tapeTypes.toRepresentation(tapeType.name)}}
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="this.snippets" class="list-snippet">
+            <app-card-snippet *ngFor="let snippet of snippets" [snippet]="snippet">
+            </app-card-snippet>
+            <button 
+                *ngIf="!fullListIsDisplayed" 
+                (click)="clickLoadSnippets()"
+            >
+                Загрузить еще
+            </button>
+        </div>
+    </div>
+</div>

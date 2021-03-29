@@ -1,0 +1,48 @@
+.content-area {
+    margin: 16px;
+}
+
+
+.ngx-file-drop__drop-zone-custom-3 {
+    color: red;
+    padding: 40px;
+}
+
+.text-upload {
+    margin: 16px;
+}
+
+.upload-area {
+    margin: 8px;  
+}
+
+img {
+    border-radius: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.upload-footer {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.upload-footer button {
+    padding: 8px;
+    border: none; 
+    outline: none;
+    background: inherit;
+    color: #fff;
+    background: #61A2EF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2.5px;
+}
+
+.upload-footer button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.02);
+}
+
+.load-indicator {
+    margin-top: 10px;
+}

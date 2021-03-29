@@ -1,0 +1,119 @@
+.card-snippet {
+    background: #E9F3F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 75%;
+    margin: 16px auto;
+}
+
+.card-title {
+    margin : 0;
+    padding : 16px 0px 8px 32px;
+}
+
+.card-body {
+    padding: 8px 16px;
+}
+
+.card-sub {
+    margin : 0 16px;
+    color: #597173;
+}
+
+.card-line {
+    margin : 8px 0;
+    border-top:1px solid #9EC1D4;
+}
+
+.card-manage {
+    padding : 16px;
+}
+
+
+.card-manage button {
+    outline:none;
+    box-shadow:none;
+    border: none;
+    padding : 5px;
+    border-radius: 60%;
+}
+
+.active {
+    background: red;
+}
+
+.disable {
+    background: #3245F8;
+}
+
+.span-das {
+    margin : 0 0 0 10px;
+}
+
+img {
+    height: 24px;
+}
+
+.container-comment {
+    background: #E9F3F1;
+    padding: 16px;
+}
+
+.container-comment textarea {
+    width: 100%;
+    margin: 0;
+    outline: none;
+    border: 1px solid #9C9C9C;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.container-comment textarea:focus {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+.container-comment button {
+    height: 100%;
+    border: none; 
+    outline: none;
+    background: inherit;
+}
+
+.comment-content {
+    position: relative;
+}
+
+.comment-content span {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    color: #597173;
+}
+
+.card-snippet:hover {
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+} 
+
+.icon_favorite {
+    width: 24px;
+    height: 24px;
+    fill : rgba(255, 36, 0);
+}
+
+.icon_favorite:hover {
+    fill : rgba(255, 36, 0, 0.75);
+}
+
+.icon_dis_favorite {
+    width: 24px;
+    height: 24px;
+    fill : rgba(0, 0, 0, 0.5);
+}
+
+.icon_dis_favorite:hover {
+    fill : rgba(0, 0, 0, 1);
+}
+
+.flag_favorite {
+    display: none;
+}

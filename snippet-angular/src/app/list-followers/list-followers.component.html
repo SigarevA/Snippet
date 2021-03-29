@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="top-header">
+        <h5>Подписчики</h5>
+    </div>
+    <div *ngIf="this.followers" class="content">
+        <div>
+            <app-card-author (unsubscribeEvent)="handleUnSubscribeEvent($event)" *ngFor="let author of this.followers" [representationAuthorDTO]="author"></app-card-author>
+        </div>
+        <div *ngIf="followers">
+            <p *ngIf="followers.length == 0">
+                Пусто
+            </p>
+        </div>
+    </div>
+</div>

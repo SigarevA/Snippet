@@ -1,0 +1,53 @@
+<div class="card-snippet">
+    <h5 class="card-title">
+        <a [routerLink]="['/profile', this.snippet.author.id]">{{this.snippet.author.name}}</a>
+    </h5>
+    <span class="card-sub">
+        {{this.snippet.datePublication | date: "HH:mm dd.MM.yyyy"}}
+    </span>
+    <div class="card-line">
+    </div>
+    <div class="card-body">
+        {{this.snippet.content}}</div>
+    <div class="card-line"></div>
+    <div class="card-manage">
+        <svg [ngClass]="{'icon_dis_favorite': true, 'flag_favorite' : this.snippet.favorite}" (click)="clickLikeSnippet()">
+            <use xlink:href="assets/media/image/favorite_border-black-36dp.svg#favorite_border-black"></use>
+        </svg>
+        <svg [ngClass]="{'icon_favorite': true, 'flag_favorite' : !this.snippet.favorite}" (click)="clickLikeSnippet()">
+            <use xlink:href="assets/media/image/favorite-black-36dp.svg#favorite"></use>
+        </svg>
+        <span class="span-das">
+            <span *ngIf="this.snippet.listOfUsersLikedTheSnippet">
+                {{this.snippet.listOfUsersLikedTheSnippet.length}}
+            </span>
+            <span *ngIf="!this.snippet.listOfUsersLikedTheSnippet">
+                0
+            </span>
+        </span>
+        <span *ngIf="this.snippet" class="span-das">
+            <button (click)="showComments()" type="button" data-toggle="collapse" [attr.data-target]="'#' + this.ID + this.snippet.id" aria-expanded="false">
+                <img src="assets/media/image/outline_comment.png" alt="comment">
+            </button>
+        </span>
+    </div>
+    
+    <div *ngIf="this.snippet" class="collapse" [id]="this.ID + this.snippet.id">
+        <div class="card-line"></div>
+
+        <app-card-comment *ngFor="let comment of comments" [comment]="comment">
+        </app-card-comment>
+
+        <div class="container-comment">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-7 comment-content">
+                    <textarea (keyup)="keyUpContentComment()" name="contentComment" [(ngModel)]="this.contentComment"></textarea> 
+                    <span>{{this.actualValueLength}} / {{this.MAX_LENGTH_COMMENT}}</span>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-5">
+                    <button (click)="sendComment()">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

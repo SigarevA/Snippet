@@ -1,0 +1,16 @@
+<div class="card-author col-lg-8">
+    <div class="row">
+        <div class="col-xl-1 col-sm-2">
+            <img src="assets/media/image/account-user.png" alt="account-user">
+        </div>
+        <div class="col-sm-4">  
+            <p>
+                <a [routerLink]="['/profile', this.representationAuthorDTO.id]">{{this.representationAuthorDTO.name}}</a>
+            </p>
+            <p *ngIf="isUser()">
+                <button *ngIf="!this.representationAuthorDTO.subscription" (click)="this.clickSubscribe()">Подписаться</button>
+                <button *ngIf="this.representationAuthorDTO.subscription" (click)="this.clickUnsubscribe()">Отписаться</button>
+            </p>
+        </div>
+    </div>
+</div>

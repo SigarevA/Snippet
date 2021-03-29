@@ -1,0 +1,66 @@
+<div class="container">
+
+    <div *ngIf="this.successLoad" class="alert alert-secondary" role="alert">
+        <strong>Выполнено!</strong> Фотография успешно загружена.
+    </div>
+
+    <div *ngIf="this.limitSizeError" class="alert alert-info" role="alert">
+        <strong>Приносим свои искренние извинения за неудобства!</strong>
+        Мы не сможем загрузить данную фотографию из-за большого размера. Используйте иную или выделите меньшую область.
+    </div>
+
+    <div *ngIf="flagNotTheExactNumberOfFilesUploaded" class="alert alert-danger" role="alert">
+        <strong>Ошибка!</strong> Перетащите или выберите только один файл.
+    </div>
+
+    <div *ngIf="flagNoCorrectFormat" class="alert alert-danger" role="alert">
+        <strong>Ошибка!</strong> Принимаются файлы только с расширениями jpg, png.
+    </div>
+
+    <div class="upload-area">
+        <ngx-file-drop
+            [accept]="'.png,.jpg'" 
+            dropZoneLabel="Перетащите сюда файлы."
+            showBrowseBtn="true"
+            (onFileDrop)="dropped($event)" 
+            (onFileOver)="fileOver($event)"
+            (onFileLeave)="fileLeave($event)"
+        >
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+            <p class="text-upload">Перетащите сюда изображение. </p>
+            <div>
+                <button type="button" (click)="openFileSelector()">Browse Files</button>
+            </div>
+          </ng-template>
+        </ngx-file-drop>
+    </div>
+
+    <div class="row"> 
+        <div #cropContainer class="col-6" style="display: block; width: 400px; height: 400px;">
+            <image-cropper
+                [imageBase64]="this.path"
+                [maintainAspectRatio]="true"
+                [aspectRatio]="1 / 1"
+                (imageLoaded)="imageLoaded($event)"
+                [resizeToHeight]="240"
+                [resizeToWidth]=240
+                format="jpeg"
+                roundCropper="true"
+                (imageCropped)="imageCropped($event)"
+            ></image-cropper>
+        </div>
+        <div class="col-6"  style="display: block; width: 400px; height: 400px;">
+            <img *ngIf="this.cropImage" [src]="this.cropImage">
+        </div>
+    </div>
+
+    <div *ngIf="this.cropImage && !this.isLoading" class="upload-footer" (click)="clickSaveBtn()">
+        <button>Сохранить</button>
+    </div>
+
+    <div *ngIf="this.isLoading" class="text-center load-indicator">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

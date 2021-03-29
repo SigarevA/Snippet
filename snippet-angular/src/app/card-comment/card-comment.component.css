@@ -1,0 +1,42 @@
+.card-comment {
+    background: #F0FAF8;
+    margin: 16px;
+    border: 1px solid #160D39;
+    padding: 16px 32px;
+    border-radius: 10px;
+}
+
+.card-comment button {
+    outline:none;
+    box-shadow:none;
+    border: none;
+    padding : 5px;
+    border-radius: 60%;
+}
+
+.account-user img {
+    height: 40px;
+    margin: 16px;
+}
+
+.active {
+    background: red;
+}
+
+.disable {
+    background: #3245F8;
+}
+
+.body p {
+    margin: 16px 0;
+    padding: 8px;
+}
+
+.manage button {
+    margin: 8px 16px;
+}
+
+.content {
+    background: rgba(255, 231, 168, 0.49);
+    border: 1px solid #000000;
+}

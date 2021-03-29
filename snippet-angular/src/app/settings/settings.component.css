@@ -1,0 +1,33 @@
+ul {
+    color: rgba(0, 0, 0, 1);
+    list-style: none;
+    padding: 8px;
+    ;
+}
+
+.menu-items ul li button{
+    outline:none;
+    box-shadow:none;
+    background: inherit;
+    margin: 2px;
+}
+
+.active_type_tape {
+    color: rgba(0, 0, 0, 1);
+    padding-left: 4px;
+    text-decoration: none;
+    border: none;
+    border-left : 10px solid rgba(5, 6, 85);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+}
+
+.disactive_type_tape {
+    color: rgba(0, 0, 0, 0.75);
+    padding-left: 4px;
+    border: none;
+    text-decoration: none;
+    border-left : 10px solid rgba(5, 6, 85, 0.5);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+}
